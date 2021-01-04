@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Landing from './components/Landing'
+import Greet from './components/Greet'
+import Follow from './components/Follow'
+import AxiosGet from './AxiosGet'
+import AxiosPost from './AxiosPost'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Landing />
+      <Greet name='Imam'>
+        <p>Isi Greet</p>
+      </Greet>
+      <Follow>
+        <button>
+          tes button
+        </button>
+      </Follow>
+      <br></br>
+      <AxiosPost/>
+      <AxiosGet/>
     </div>
   );
 }
